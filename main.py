@@ -58,11 +58,11 @@ def automate_function(
     ]
     count = len(objects_with_forbidden_speckle_type)
 
-    print("automate_function(): found " + str(len(count)) + " elements of forbidden type: " + function_inputs.forbidden_speckle_type)
+    print("automate_function(): found " + str(count) + " elements of forbidden type: " + function_inputs.forbidden_speckle_type)
 
     if count > 0:
 
-        print("automate_function(): count = " + str(len(count)) + " > 0")
+        print("automate_function(): count = " + str(count) + " > 0")
 
         # this is how a run is marked with a failure cause
         automate_context.attach_error_to_objects(
@@ -83,7 +83,7 @@ def automate_function(
         automate_context.set_context_view()
 
     else:
-        print("automate_function(): count = " + str(len(count)) + "")
+        print("automate_function(): count = " + str(count) + "")
         automate_context.mark_run_success("No forbidden types found.")
 
     # if the function generates file results, this is how it can be
