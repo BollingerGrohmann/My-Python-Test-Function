@@ -9,7 +9,7 @@ def flatten_base(base: Base) -> Iterable[Base]:
     """Take a base and flatten it to an iterable of bases."""
 
     if hasattr(base, "elements"):
-        print("flatten: base has " + str(len(elements)) + " elements")
+        print("flatten: base has " + str(len(base.elements)) + " elements")
         for element in base["elements"]:
             yield from flatten_base(element)
 
